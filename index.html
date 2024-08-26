@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul></ul>
+    <script>
+        let factorial_prompt = Number(prompt("Factorial"))
+        let factorial = 1;
+        for (let i = factorial_prompt; i > 0; i--) {
+            factorial *= i;
+        }
+        console.log(factorial);
+
+        let leapyear_prompt = Number(prompt("Leap year"))
+        if (leapyear_prompt % 4 === 0) {
+            console.log("Leap year")
+        } else {
+            console.log("Not leap year")
+        }
+
+        let counter = 0;
+        let sum = 0;
+        while (counter < 100) {
+            counter++;
+            sum += counter;
+        }
+        console.log(sum);
+
+        let num1 = Number(prompt("Number 1"));
+        let num2 = Number(prompt("Number 2"));
+        console.log(num1 + num2);
+        console.log(num1 - num2);
+        console.log(num1 * num2);
+        console.log(num1 / num2);
+
+        let data_string = "hello";
+        let data_number = 5;
+        let data_boolean = true;
+        let data_null = null;
+        let data_undefined = undefined;
+        let data_object = {};
+        let data_array = [];
+        let data_none;
+        let object_list = [{
+            name: "John",
+            price: 1000
+        }, {
+            name: "Jane",
+            price: 2000
+        }];
+        for (let i = 0; i < object_list.length; i++) {
+            let list_item = document.createElement("li");
+            list_item.textContent = object_list[i].name;
+            document.querySelector("ul").appendChild(list_item);
+        }
+    </script>
+</body>
+
+</html>
